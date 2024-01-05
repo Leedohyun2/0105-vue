@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for 디렉티브로 고객정보 출력하기</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <h2>좋아하는 과일은?</h2>
+    <div id="app">
+        <ul>
+            <li v-for = "(item, index) in persons">
+                <p>{{ index + 1}}</p>
+                <p>{{ item.name}}</p>
+                <p>{{ item.age}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                persons: [
+                    {
+                        name: "홍길동",
+                        age: 20
+                    },
+                    {
+                        name: "이순신",
+                        age: 30
+                    },
+                    {
+                        name: "김유신",
+                        age: 40
+                    }
+                ]
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

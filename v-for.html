@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문을 이용한 과일 목록 출력</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>좋아하는 과일은?</h1>
+        <ol>
+            <!-- v-for 반복문으로 fruit 과일 배열 데이터를 가져옴 -->
+            <li v-for="item in fruit">
+                <!-- fruit 안의 fruitName 항목을 하나씩 가져와 html로 렌더링 -->
+                {{ item fruitName }}
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        var main = new Vue({
+            el: '#app',
+            data: {
+                // 과일의 이름을 가진 fruits 배열을 데이터로 정의함
+                fruit: [
+                    { fruitName: '사과' },
+                    { fruitName: '배' },
+                    { fruitName: '복숭아' }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

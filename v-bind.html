@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>v-bind</title>
+
+    <style>
+        .blue_style {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-bind 안에도 자바스크립트 사용 가능하므로 변수와 문장으로 연결하여 클래스
+        이름을 완성하여 연결 -->
+        <h1 v-bind:class="sColor + '_style'">안녕하세요</h1>
+        <p>
+            올해년도 <input type="text" :value="gDate">
+        </p>
+        <!-- 콜론(:) 앞은 생략 가능 -->
+        <!-- <input :value="sDate"> -->
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                sColor: "blue",
+                gDate: new Date().getFullYear()
+            }
+        })
+    </script>
+</body>
+
+</html>

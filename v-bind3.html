@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 데이터 동기화</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{ msg }}</h2>
+        <!-- v-model은 데이터에 접근해서 가져오는 것과 동시에 입력이 동기화됨 -->
+        <!-- 엘리먼트의 어트리뷰트는 'v-model:' 다음에 명시 -->
+        <p>
+            텍스트 입력<input type="text" :value="msg">
+        </p>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                msg: "입력하세요"
+            }
+        })
+    </script>
+</body>
+
+</html>

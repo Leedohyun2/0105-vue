@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Hello, VueJS</title>
+</head>
+
+<body>
+    <!-- 머스태시 -->
+    <!-- <p>{{ sTile }}</p> -->
+
+    <div id="app">
+        <h1>{{ sTitle }}</h1>
+    </div>
+
+    <div id="sContent">
+        <h1>{{ sTitle2 }}</h1>
+        <h2>{{sContent2}}</h2>
+    </div>
+
+    <script>
+        // vue 객체를 생성하여 앱을 초기화하고 시작함
+        new Vue({
+            el: '#app', // id속성값이  "app"인 div 엘리먼트와 앱을 연결시켜 구동
+            data: {
+                // {{ sTitle }}로 데이터 값을 전달함
+                sTitle: 'Hello, VueJS'
+            }
+        });
+
+        new Vue({
+            el: '#sContent',
+            data: {
+                sTitle2: 'Good bye',
+                sContent2: 'React'
+            }
+        });
+    </script>
+</body>
+
+</html>
