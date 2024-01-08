@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭하면 홀짝</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>랜덤값 : {{num.toFixed(2)}}</h2>
+        <p>값 > 0.5 : {{ rst > 0.5 }}</p>
+
+        <p>동전 :
+            <span v-if="rst == true">앞면</span>
+            <span v-else>뒷면</span>
+        </p>
+
+        <button v-on:click="changeValue">CLICK</button>
+    </div>
+
+    <script>
+        new Vue({
+            // html 속성을 연결
+            el: '#app',
+            // html에 데이터를 전달
+            data: {
+                num: Math.random(),
+                rst: this.num > 0.5
+            },
+            // methods에는 함수만 작성
+            methods: {
+                changeValue(){
+                    this.num = Math.random();
+                    this.rst = this.num > 0.5
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computed_ex</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>원본 텍스트 : 
+            <input type="text" v-model:value="originMsg">
+        </h2>
+        <h3>원본 텍스트 : {{originMsg}}</h3>
+        <h3>소문자 변환 : {{ lowerCaseMSG }}</h3>
+        <h3>대문자 변환 : {{ upperCaseMSG }}</h3>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                originMsg: "hello, javascript",
+            },
+            // 복잡한 로직 처리시 methods 대신에 computed 사용
+            computed: {
+                lowerCaseMSG: function(){
+                    return this.originMsg.toLowerCase()
+                },
+                upperCaseMSG: function(){
+                    return this.originMsg.toUpperCase()
+                }
+            }
+        });
+    </script>
+</body>
+</html>

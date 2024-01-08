@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트다운</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>클릭 숫자 : {{nClick}}</h2>
+        <h2>카운트 다운 : {{countNum}}</h2>
+        <!-- <button @click="fnlncrement">CLICK</button> -->
+        <button v-on:click="fnlncrement">CLICK</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                nClick: 0
+            },
+            methods: {
+                // clickNum 값을 하나 증가시킴
+                fnlncrement() {
+                    this.nClick++;
+                }
+            },
+            // computer는 mustache안에 로직이 복잡할 때 사용
+            computed: {
+                countNum() {
+                    // nClicks 값이 10을 기준으로 거꾸로 카운트 되로고 감소시킴
+                    return 10 - this.nClick;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
