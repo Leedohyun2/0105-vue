@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태관리와 vuex</title>
+</head>
+
+<body>
+    <h1>Vuex란?</h1>
+    <ul>
+        <li>뷰의 코어 중 상태관리를 위한 패턴 & 라이브러리</li>
+        <li>하나의 뷰 또는 복수의 화면 사이에서 여러 개의 컴포넌트를 사용하게 되면
+            각 컴포넌트 간에 상태값 전달이나 공유(컴포넌트 간 공유할 수 있는 데이터 관리)
+        </li>
+        <li>localStorage에 저장되지 않고 메모리에 저장되므로 새로고침 시 데이터 초기화</li>
+        <li>상태를 새로고침 하더라도 데이터를 유지하기 위해서는 별도의 라이브러리 필요</li>
+    </ul>
+
+    <h2>Vuex의 작동원리 이해하기</h2>
+    <ul>
+        <li>State, Multations, Getters, Actions 4개의 속성</li>
+    </ul>
+
+    <h3>state</h3>
+    <p>- 공유한 상탯값 데이터 정의</p>
+    <h3>matations</h3>
+    <p>- setter의 의미, 외부에서 동기 방식으로 저장할 때 사용</p>
+    <h3>getters</h3>
+    <p>- state의 데이터 값을 외부에서 읽어 올 때 사용</p>
+    <h3>actions</h3>
+    <p>- 외부의 api 실행 같은 비동기 실행을 관리 할 때 사용</p>
+
+    <h2>라우터란?</h2>
+    <ul>
+        <li>페이지 간 이동을 위한 라이브러리</li>
+        <li>경로와 컴포넌트를 등록하면 싱글 페이지 앱에서 사용자가 클릭한<br>
+            경로로 화면이 이동하도록 도와줌
+        </li>
+    </ul>
+
+    <h2>주요기능</h2>
+    <ul>
+        <li>중첩된 route/view mapping</li>
+        <li>모듈화된, 컴포넌트 기반의 라우터 설정</li>
+        <li>라우터 파라미터, 쿼리, 와일드카드</li>
+        <li>Vuejs의 transition system을 이용한 트랜지션 효과</li>
+        <li>세밀한(Fine-grained) 네이게이션 컨트롤</li>
+        <li>active CSS클래스를 자동으로 추가해주는 링크</li>
+        <li>html5 history 모드 또는 Hash모드
+            <ul>
+                <li>auto-fallback in IE9</li>
+                <li>vue router에서 default는 Hash모드</li>
+            </ul>
+        </li>
+        <li>사용자 정의 가능한 스크롤 동작</li>
+    </ul>
+</body>
+
+</html>

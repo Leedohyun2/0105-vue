@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuex</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/vuex@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>vuex를 활용한 카운터 만들기</h2>
+        Count : {{ getStoreData }}
+        <hr />
+        <com-counter title="카운터 1"></com-counter>
+        <com-counter title="카운터 2"></com-counter>
+    </div>
+
+    <script>
+        const store = new Vuex.Store({
+            state: {
+                count: 0
+            },
+            mutations: {
+                fnIncData: function(state){
+                    return state.count++;
+                },
+                fnDecData: state => state.count--
+            },
+            getters: {
+                fnGetData(state){
+                    return state.count;
+                }
+            },
+            actions: {
+                async actDecData({commit}, state){
+                    const result = await api.fnDecrement()
+                    if(result == true) commit("fnDecData")
+                }
+            }
+        });
+
+        const api = {
+            fnDecrement(){
+                return new Promise(resolve=>{
+                    setTimeout( ()=>{
+                        resolve(true)
+                    }, 1000)
+                });
+            }
+        };
+
+        Vue.component("com-counter", {
+            props: ['title'],
+            template: `
+                <div>
+                    <h3>{{ title }}</h3>
+                    <p>{{ fnGetData }}</p>
+                    <p>
+                        <button @click="fnIncCount">증가</button>
+                        <button @click="fnDecCount">감소</button>
+                    </p>
+                </div>
+            `,
+            computed: {
+                // fnGetData: function(){
+                fnGetData(){
+                    // return "TEXT";
+                    return store.getters.fnGetData;
+                }
+            },
+            methods: {
+                fnIncCount(){
+                    store.commit('fnIncData');
+                },
+                fnDecCount(){
+                    // store.commit('fnDecData');
+                    store.dispatch('actDecData')
+                }
+            }
+        });
+
+        new Vue({
+            el: "#app",
+            computed: {
+                getStoreData(){
+                    return store.getters.fnGetData;
+                }
+            },
+            store
+        })
+    </script>
+</body>
+</html>
