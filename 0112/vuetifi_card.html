@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vuetify.js에 필요한 스타일 파일 링크 연결 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <style>
+        .border_style {
+            border: 1px solid tomato;
+            background: #9C0;
+        }
+
+        .brd {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container>
+                    <!-- 한 행은 12개의 열이 기준 -->
+                    <v-row class="text-center">
+                        <v-col cols="12" class="border_style">xs12</v-col>
+                        <v-col cols="6" class="border_style">xs6</v-col>
+                        <v-col cols="6" class="border_style">xs3</v-col>
+                    </v-row>
+
+                    <!-- 현재 열의 개수가 9개인데 열 4개를 추가하면 12를 초과하므로 자동 줄바꿈 -->
+                    <v-col cols="4" class="border_style">xs4</v-col>
+
+                    <!-- 총 12개의 열을 추가. 6개 열을 채운 후 4개의 열은 자동으로 줄바꿈 -->
+                    <v-col cols="1" v-for="item in 6" v-bind:key="item.id" class="border_style">xs1</v-col>
+                    <br>
+                    <!-- 총 20개생성.  열의 개수가 12개를 넘으면 자동으로 줄바꿈 -->
+                    <v-row class="text-center">
+                        <v-col cols="1" v-for="item in 20" v-bind:key="item.id" class="border_style">xs1</v-col>
+                    </v-row>
+                </v-container>
+
+                <v-container fluid>
+                    <v-row class="text-center">
+                        <v-col cols="6" sm="4" md="8" class="brd">sm4</v-col>
+                        <v-col cols="6" sm="4" md="4"  offset-md="0" offset-sm="4" class="brd">sm4</v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                // cdn방식 대신 생성자로 사용하기
+                vuetify: new Vuetify(),
+            })
+        </script>
+</body>
+
+</html>

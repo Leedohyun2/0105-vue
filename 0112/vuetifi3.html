@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vuetify.js에 필요한 스타일 파일 링크 연결 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+    <style>
+        .border_style {
+            border: 1px solid tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-app-bar app float color="primary">
+                <v-toolbar-title class="white--text mx-auto">
+                    Responsive By Vuetifi
+                </v-toolbar-title>
+            </v-app-bar>
+        </v-app>
+
+        <v-main>
+            <v-container>
+                <v-row>
+                    <v-col cols="12" sm="6" class="brd">
+                        <h2>Content 1</h2>
+                        <p>1111</p>
+                        <p>1111</p>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-main>
+    </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                // cdn방식 대신 생성자로 사용하기
+                vuetify: new Vuetify(),
+            })
+        </script>
+</body>
+
+</html>
