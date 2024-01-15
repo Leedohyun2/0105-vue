@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%
+        }
+        body, h1, h2, p, div {
+            margin: 0;
+            padding: 0
+        }
+        header{
+            height:100px;
+            box-shadow: 0 2px 3px 3px gray;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative
+        }
+        .nav_btn{
+            width: 100px;
+            height: 100px;
+            background: teal;
+            text-indent: -9999px
+        }
+        main{
+            height: calc(100% - 160px);
+            /* height: calc(100vh - 160px); */
+            background: #ccc
+        }
+        footer{
+            height: 60px;
+            background: #999;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            box-sizing: border-box
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="nav_btn">열기</a>
+        <h1>HEADER</h1>
+    </header>
+    <main>
+        <h2>MAIN</h2>
+        <p>main content</p>
+    </main>
+    <footer>FOOTER</footer>
+</body>
+</html>

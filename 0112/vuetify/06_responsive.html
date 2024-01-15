@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuetify</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+    <style>
+        .brd{
+            border: 3px solid teal
+          }
+    </style>
+</head>
+<body>
+    <div id="app">
+         <v-app>
+            <v-app-bar app float color="primary">
+              <v-toolbar-title class="white--text mx-auto">
+                Responsive By Vuetify
+              </v-toolbar-title>
+            </v-app-bar>
+            <v-main>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" sm="6" class="brd">
+                    <h2>Content 1</h2>
+                    <p>111111</p>
+                    <p>111111</p>
+                  </v-col>
+
+                  <v-col cols="12" sm="6" class="brd">
+                    <h2>Content 2</h2>
+                    <p>222222</p>
+                    <p>222222</p>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-main>
+            <v-footer color="primary" dark>
+              copyright &copy;
+            </v-footer>
+        </v-app>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>

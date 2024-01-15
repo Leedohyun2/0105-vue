@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vuetify</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css">
+    <style>
+        .body-2{
+            font-size: 40px;
+            color: tomato
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+         <v-app>
+           <v-app-bar app color="primary" dark fixed>
+                <v-app-bar-nav-icon></v-app-bar-nav-icon>
+                <v-toolbar-title>HEADER</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn icon>
+                    <v-icon>mdi-alarm</v-icon>
+                </v-btn>
+           </v-app-bar>
+
+           <v-main>
+                <v-container>
+                    <h1 class="display-1 my-5">Hello!</h1>
+                    <p class="body-2 my-4">content</p>
+                    <v-divider></v-divider>
+                    <h1 class="display-3 my-5">Hello! 2</h1>
+                    <p class="body-1 my-4">content 2</p>
+                </v-container>
+           </v-main>
+
+           <v-footer>
+                <div class="mx-auto">copyright &copy Jay</div>
+           </v-footer>
+        </v-app>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify()
+        })
+    </script>
+</body>
+</html>
