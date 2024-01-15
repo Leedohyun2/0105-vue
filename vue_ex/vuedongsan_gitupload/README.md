@@ -1,4 +1,5 @@
 # vuedongsan
+node.modules파일이 빠진상태로 업로드함 
 
 ## Project setup
 ```
@@ -22,3 +23,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
