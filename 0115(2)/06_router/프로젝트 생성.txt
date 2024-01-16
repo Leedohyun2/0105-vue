@@ -1,0 +1,11 @@
+> vue create [프로젝트명]
+Please pick a preset : [Manually select features]
+Check the features needed for your project : [Babel], [Router]
+Choose a version of Vue.js that you want to start the project width : [2.x]
+Use history mode for router? : [Y]
+Where do you prefer placing config for Babel, ESLint, etc.? [In package.json] -- 모두 가능
+Save this as a preset for future projects? [N]
+
+
+> cd [프로젝트명]
+> vue add vuetify
