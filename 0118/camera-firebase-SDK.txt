@@ -1,0 +1,18 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyB9WnfbJIVXl-fLRYqB-1d1qbCYsxUo_ag",
+  authDomain: "camera-project-1a4fd.firebaseapp.com",
+  databaseURL: "https://camera-project-1a4fd-default-rtdb.firebaseio.com",
+  projectId: "camera-project-1a4fd",
+  storageBucket: "camera-project-1a4fd.appspot.com",
+  messagingSenderId: "361592946451",
+  appId: "1:361592946451:web:55888fc0ceb767669424e6"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
