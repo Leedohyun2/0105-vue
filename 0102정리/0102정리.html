@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 15px;
+            padding: 10px;
+        }
+
+        h3,ol,ul,li,p {
+            margin-left: 10px;
+        }
+
+        h2 {
+            color: blue;
+        }
+        
+        h3 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>순수 자바스크립트로 PWA(Progressive Web Apps)만들기</h1>
+
+    <ul>
+        <li>장점 : 웹의 장점은 그대로 유지하면서 네이티브 앱의 강점으로 무장</li>
+        <li>네이티브 앱의 강력한 기능성과 웹의 뚜어난 접근성을 모두 갖춘 가장 이상적인 형태의 웹앱이라는 평가</li>
+    </ul>
+
+    <h2>네이티브 앱은 기기에 최적화된 기능을 구현하다</h2>
+    <h3>개발</h3>
+    <p><strong>장점</strong> : 스마트폰에 최적화된 기능을 구현할 수 있다</p>
+    <p><strong>단점</strong> : 개발 난이도가 높고 시간이 오래 걸림, 같은 서비스를 운영체제별로 만들어야함</p>
+    <h3>배포</h3>
+    <p><strong>장점</strong> : 전 세계를 시장으로 삼을 수 있음</p>
+    <p><strong>단점</strong> : 업데이트가 생기면 다시 설치해야 함</p>
+
+    <h2>모바일 웹앱은 비용이 저렴하고 업데이트하기 쉽다.</h2>
+    <h3>개발</h3>
+    <p><strong>장점</strong> : 이미 익숙한 웹 기술을 그대로 이용할 수 있음, 개발 시간을 단축할 수 있음</p>
+    <p><strong>단점</strong> : 모든 하드웨어의 기능을 사용할 수 없음, 네이티브 앱과 같은 푸시 알림 기능을 사용할 수 없음</p>
+
+    <h2>하이브리드 앱은 네이티브 앱과 웹앱의 강점을 합치다</h2>
+    <h3>개발</h3>
+    <p><strong>장점</strong> : 기존에 사용하던 웹 개발 기술을 모든 운영체제에서 그대로 사용할 수 있음, 같은 코드를 모바일 운영체제 별로 다르게 패키징할 수 있음</p>
+    <p><strong>단점</strong> : 하드웨어 기능을 사용할 수 있으나 연결해주는 플러그인에 의존해야 하므로 제약이 있을 수 있음</p>
+    <h3>배포</h3>
+    <p><strong>장점</strong> : 네이티브 앱처럼 앱 스토어, 플레이 스토어에 배포 할 수 있음</p>
+    <p><strong>단점</strong> : 네이티브 앱의 배포와 같으므로 업데이트가 생기면 다시 내려 받아야함, 앱 시장이 포화 상태여서 선택받기가 어렵다</p>
+
+    <h2>프로그레시브 웹 앱 = 네이티브 앱 + 모바일 웹앱 + 하이브리드앱</h2>
+    <h3>개발</h3>
+    <p><strong>장점</strong> : 이미 익숙한 웹 기술을 그대로 이용, 개발 시간 단축, 푸시알림, 오프라인 캐시 사용가능</p>
+    <p><strong>단점</strong> : 하드웨어 사용은 웹 api를 통하므로 웹표준을 지원하는 브라우저가 반드시 필요</p>
+    <h3>배포</h3>
+    <p><strong>장점</strong> : 웹 브라우저만 있으면 어디든 배포할 수 있음</p>
+    <p><strong>단점</strong> : 앱 스토어, 플레이 스토어를 이용할 수 없음</p>
+    <br>
+
+    <h2>PWA 필수 요소과 주요 기능</h2>
+    <h3>PWA 필수 요소</h3>
+    <ol>
+        <li>서비스 워커</li>
+        <li>웹앱 매니페스트</li>
+        <li>HTTPS</li>
+    </ol>
+    <h3>주요 기능(네이티브 앱과 같은 경험)</h3>
+    <ol>
+        <li>푸시 알림</li>
+
+        <li>홈 화면에 추가</li>
+        <li>웹 API</li>
+    </ol>
+    <h3>서비스 워커</h3>
+    <ol>
+        <li>웹 브라우저 내에 있음</li>
+        <li>웹 페이지와 분리</li>
+        <li>항상 실행되고 있는 백그라운드 프로그램</li>
+        <li>캐시 관리</li>
+    </ol>
+    <h3>웹앱 매니페스트</h3>
+    <ol>
+        <li>앱 소개 정보</li>
+        <li>앱 기본 설정</li>
+        <li>JSON 파일 형식</li>
+        <li>A2H2(Add to Home Screen)</li>
+    </ol>
+    <h3>보안을 강화한 'HTTPS'</h3>
+    <ol>
+        <li>암호화와 인증을 거쳐 보안을 강화한 웹 통신 규약</li>
+        <li>반응속도가 HTTP보다 빠름</li>
+        <li>JSON 파일 형식</li>
+        <li>PWA는 로컬에서도 동작 가능</li>
+    </ol>
+    <h3>기본 정보 작성</h3>
+        <ul>
+            <li>name : 첫화면(스플래시 스크린)에 출력될 이름, 옴니 버튼에도 출력, 홈화면 아이콘</li>
+            <li>short_name : 주로 모바일에서 사용,  설치 배너에 출력</li>
+            <li>description : 웹 크롤러(검색엔진)가 정보 가져갈 때 사용</li>
+        </ul>
+    <h3>스코프</h3>
+        <ul>
+            <li>매니페스트에 정의된 내용이 적용될 수 있는 파일들의 경로 범위를 지정</li>
+            <li>웹앱이 어느 폴더에 있는지 지정</li>
+            <li>"." : 현재 폴더에 있는 모든 파일</li>
+        </ul>
+    <h3>fullscreen</h3>
+        <ul>
+            <li>기기의 최대 화면</li>
+            <li>운영체제가 fullscreen을 지원하지 않으면 standalone으로 적용</li>
+        </ul>   
+    <h3>standalone</h3>
+        <ul>
+            <li>브라우저의 주소표시줄, 상태표시줄 제거하여 일반 앱처럼 표시</li>
+            <li>가장 보편적으로 사용</li>
+        </ul>
+        <h3>fullscreen</h3>
+        <ul>
+            <li>상단에 주소 표시줄 추가</li>
+            <li>운영체제가 minimal-ui를 지원하지 않으면 standalone으로 적용</li>
+        </ul>   
+        <h3>browser</h3>
+        <ul>
+            <li>웹 브라우저와 동일한 모습으로 실행</li>
+        </ul>   
+        <h3>src</h3>
+        <ul>
+            <li>이미지의 절대 주소 또는 상대 주소</li>
+        </ul>
+        <h3>sizes</h3>
+        <ul>
+            <li>이미지의 픽셀 크기</li>
+        </ul> 
+        <h3>type</h3>
+        <ul>
+            <li>이미지의 파일 유형</li>
+        </ul>
+        <h3>shortcuts(바로가기 기능)</h3>
+        <ul>
+            <li>MS 제품군 OS 아래쪽 아이콘 > 마우스 오른쪽 > 메뉴들 중 상단 메뉴</li>
+            <li>name : 마우스 오른쪽 클릭시 출력될 이름</li>
+            <li>short_name : 모바일에서 앱 설치 후 클릭했을 때 출력</li>
+            <li>index.html 실행  > 옴니버튼  > 다운로드 실행 > 운영체제 하단 설치된 파일에서 마우스 오른쪽 > 이름에 작성된 내용과 아이콘 확인</li>
+        </ul>
+        <h3>매니페스트 작성</h3>
+        <ul>
+            <li>보편적으로 사용되므로 주로 템플릿 사용하여 작성함</li>
+        </ul>
+
+        <h3>서비스 워커 작성</h3>
+        <p>고유번호 할당받은 서비스 워커 동작 시작</p>
+        <p>self.addEvnetListener('activate', pEvent => {<br>
+            console.log('서비스워커 동작 시작됨!');<br>
+        });
+        </p>
+</body>
+</html>
