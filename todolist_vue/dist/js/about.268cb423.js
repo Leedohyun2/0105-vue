@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunktodolist_vue"]=self["webpackChunktodolist_vue"]||[]).push([[443],{992:function(t,u,n){n.r(u),n.d(u,{default:function(){return r}});var s=function(){var t=this;t._self._c;return t._m(0)},e=[function(){var t=this,u=t._self._c;return u("div",{staticClass:"about"},[u("h1",[t._v("This is an about page")])])}],l=n(1),i={},a=(0,l.Z)(i,s,e,!1,null,null,null),r=a.exports}}]);
+//# sourceMappingURL=about.268cb423.js.map
